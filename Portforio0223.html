@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Arisa|Portfolio</title>
+
+  <link rel="stylesheet" href="Portforio0223.css"> 
+
+  <!-- ここからGoogleフォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+  <script src="https://use.typekit.net/plx5yxp.js" async></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script></head>
+
+<body>
+  <div class="container" id="home">
+<!-- ここからハンバーガーメニュー -->
+    <header class="hamberger-menu">
+      <input type="checkbox" id="menu-btn-check">
+      <label for="menu-btn-check" class="menu-btn">
+        <span></span>
+      </label>
+      <div class="menu-content">
+        <ul>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#like">LIKE</a></li>
+          <li><a href="#skill">SKILL</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="home">
+        <img src="img/welcome2.png" class="welcome"> 
+      </div>
+      </header>
+  </div>
+
+<!-- TOPへ戻る -->
+  <a href="#home" id="page-top">TOP</a>
+
+<!-- ABOUT -->
+  <section id="about">
+    <h2 class="section-header">ABOUT</h2>
+    <div class="section1">
+      <img src="img/introduce.jpg" class="profile">
+      <div class="introduce">
+        <p class="text">はじめまして。加藤ありさと申します。<br>
+         神奈川県横須賀市出身、1993年生まれ。<br>
+         ライブに行くこと，柱状節理が好きです。<br>
+         前職は、新卒から地質調査や地盤調査の会社で<br>
+         現場管理や報告書作成など行なっていました。<br>
+         昔から「ものづくり」に興味があり、転職を決断しました。<br>
+         現在は、自社にてWebデザイナーになるべく勉強しています。<br>
+        </p>
+      </div>
+    </div>
+    <div id="horizon4"></div>
+  </section>
+
+<!-- LIKE -->
+  <section id="like">
+    <h2 class="section-header geo">LIKE</h2>
+
+    <ul class="honeycomb">
+      <li class="honeycomb-cell">
+        <img class="honeycomb-cell_image" src="img/donuts.jpg">
+        <div class="honeycomb-cell_title">Sweets</div>
+      </li>
+      <li class="honeycomb-cell">
+        <img class="honeycomb-cell_image" src="img/travel.jpg">
+        <div class="honeycomb-cell_title">Trip</div>
+      </li>
+      <li class="honeycomb-cell honey">
+        <img class="honeycomb-cell_image" src="img/live1.jpg">
+        <div class="honeycomb-cell_title">LIVEHOUSE</div>
+      </li>
+      <li class="honeycomb-cell">
+        <img class="honeycomb-cell_image" src="img/fossil3.JPG">
+        <div class="honeycomb-cell_title">Fossil</div>
+      </li>
+      <li class="honeycomb-cell" id="geo">
+        <img class="honeycomb-cell_image" src="img/nanatsugama.jpeg" >
+        <div class="honeycomb-cell_title">Geology</div>
+      </li>
+      <li class="honeycomb-cell honey">
+        <img class="honeycomb-cell_image" src="img/kimono.jpg">
+        <div class="honeycomb-cell_title">Kimono</div>
+      </li>
+      <li class="honeycomb-cell honeycomb_placeholder"></li> 
+    </ul>
+    <br><br><br><br><br>
+  </section>
+
+<!-- SKILL -->
+  <section id="skill">
+    <h2 class="section-header">SKILL</h2>
+    <div class="skill">
+      <table class="skill-table">
+        <tbody>
+          <tr>
+            <th class="th01">デザイン</th>
+            <td>・illustrator</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>・Photoshop</td>
+          </tr>
+          <tr>
+            <th>コーディング</th>
+            <td class="th01">・HTML</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>・CSS</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>・JavaScript</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+<!-- CONTACT -->
+  <section id="contact">
+    <h1 class="section-header">Contact</h1>
+
+    <div class="contact-wrapper">
+      
+      <form id="contact-form" class="form-horizontal" role="form">
+          
+        <div class="form-group">
+          <div class="col-sm-12">
+            <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-12">
+            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+          </div>
+        </div>
+
+        <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+          
+        <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+          <div class="alt-send-button">
+            <span class="send-text">SEND</span>
+          </div>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">&copy;Arisa Kato</div>
+  </footer>
+
+  <script>
+    $(function () {
+      winW = $(window).width();
+        speed = 2000;
+      $('#horizon1').animate({
+        width: winW
+      }, speed);
+    });
+
+    $(function () {
+      winW = $(window).width();
+        speed = 2000;
+      $('#horizon4').css({
+        left: winW / 2
+      }).animate ({
+        left: 0,
+          width: winW
+      }, speed);
+    });
+
+    document.getElementById('geo').onclick = () => {
+      alert('この写真は佐賀県呼子港にある「七ツ釜（ななつがま）」と呼ばれている『柱状節理』という地質構造を撮影したもの。七ツ釜は国の天然記念物にも指定されている景勝地である。')
+    };
+
+  </script>
+
+</body>
+</html>
